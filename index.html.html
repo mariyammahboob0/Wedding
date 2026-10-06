@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdullah &amp; Sameena — Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f4ece6;--panel:#f9f4ef;--ink:#2b2a22;--olive:#343a1d;--gold:#b6842f;--rose:#efc3b8;--sage:#a9b39b;--on-olive:#efe6d8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#e9dfd6;--panel:#f1e9e1}}
+:root[data-theme="dark"]{--paper:#e9dfd6;--panel:#f1e9e1}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0}
+body{background:var(--paper);color:var(--ink);font:400 18px/1.6 "Cormorant Garamond",Georgia,serif;text-align:center;overflow-x:hidden}
+body.lock{overflow:hidden}
+.script{font-family:"Pinyon Script","Snell Roundhand",cursive;font-weight:400;line-height:1.1}
+h2.script{font-size:3rem;margin:0 0 .6rem}
+section{padding:4.5rem 1.6rem;max-width:520px;margin:auto}
+.glass{background:
+ repeating-linear-gradient(60deg,transparent 0 38px,rgba(182,132,47,.75) 38px 40px),
+ repeating-linear-gradient(-60deg,transparent 0 38px,rgba(182,132,47,.75) 38px 40px),
+ radial-gradient(circle at 20% 30%,#f6d6cc 0 22%,transparent 23%),
+ radial-gradient(circle at 80% 70%,#cdd5bf 0 22%,transparent 23%),
+ radial-gradient(circle at 70% 20%,#f3cdc2 0 18%,transparent 19%),
+ linear-gradient(135deg,#f8e4dc,#e9d3c9 45%,#d6dcc8)}
+/* intro seal */
+#seal{position:fixed;inset:0;z-index:50;display:flex}
+#seal .h{flex:1;transition:transform 1.3s cubic-bezier(.7,0,.2,1);position:relative}
+#seal .h:first-child{border-right:3px solid var(--gold)}
+#seal .l{transform-origin:left}
+#seal.open .h:first-child{transform:translateX(-101%)}
+#seal.open .h:last-child{transform:translateX(101%)}
+#seal.open .msg,#seal.open #btn{opacity:0;pointer-events:none}
+#btn{position:absolute;left:50%;top:50%;translate:-50% -50%;width:150px;height:150px;border-radius:50% 50% 46% 46%;border:5px solid var(--gold);background:radial-gradient(circle,#fbe9e2,#efc3b8 70%);font-size:2.2rem;color:var(--gold);cursor:pointer;z-index:2;transition:opacity .4s,transform .3s;box-shadow:0 0 0 8px rgba(169,179,155,.7),0 8px 30px rgba(0,0,0,.25)}
+#btn:hover{transform:scale(1.05)}
+#btn:focus-visible,.cta:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--olive);outline-offset:3px}
+.msg{position:absolute;z-index:2;left:0;right:0;top:14%;margin:auto;width:min(90%,380px);font-family:"Aref Ruqaa","Amiri","Noto Naskh Arabic",serif;font-weight:700;font-size:clamp(1.9rem,8vw,2.5rem);line-height:1.9;color:var(--olive);text-shadow:0 0 6px #f9f4ef,0 0 14px #f9f4ef,0 0 24px #f9f4ef;transition:opacity .4s}
+.tap{position:absolute;z-index:2;left:0;right:0;bottom:12%;color:var(--olive);font-size:.95rem;letter-spacing:.15em;transition:opacity .4s}
+/* hero */
+.hero{min-height:100svh;padding:0;max-width:none;display:flex;flex-direction:column;justify-content:center;align-items:center;color:var(--ink);position:relative}
+.hero .inner{background:rgba(249,244,239,.9);width:min(88%,430px);padding:3rem 1.4rem;border:3px solid var(--gold);outline:10px solid rgba(169,179,155,.55);outline-offset:-1px}
+.hero .names{font-size:3.3rem}
+.hero small{display:block;letter-spacing:.14em;font-size:.95rem;margin:1.1rem 0}
+.disc{display:inline-block;margin-top:1.4rem;letter-spacing:.25em;font-size:.8rem;color:var(--ink);text-decoration:none}
+/* countdown */
+.cd{display:flex;justify-content:center;gap:1.2rem;margin-top:1.2rem}
+.cd b{display:block;font:500 2.2rem/1 "Cormorant Garamond",serif;color:var(--gold)}
+.cd span{font-size:.8rem;letter-spacing:.12em}
+.lbl{font-size:2rem;margin-top:1.3rem;color:var(--gold)}
+.orn{display:flex;align-items:center;justify-content:center;gap:.8rem;color:var(--gold);margin:1rem 0}
+.orn:before,.orn:after{content:"";height:1px;width:70px;background:var(--gold)}
+/* olive blocks */
+.olive{background:var(--olive);color:var(--on-olive);max-width:none}
+.olive>div{max-width:480px;margin:auto}
+.olive .script{color:#f1e6d6}
+.scratch{position:relative;width:min(78vw,300px);aspect-ratio:3/4;margin:2.2rem auto 0;border-radius:50%;border:8px solid var(--gold);outline:7px solid var(--rose);outline-offset:0;overflow:hidden;background:var(--panel);color:var(--ink);display:flex;flex-direction:column;justify-content:center}
+.scratch .script{font-size:2.3rem;color:var(--olive)}
+.scratch canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab}
+/* event card */
+.card{margin:2rem auto 0;padding:26px;max-width:340px}
+.card>div{background:var(--panel);padding:2.4rem 1rem;border:2px solid var(--gold)}
+.btns{display:flex;gap:.7rem;justify-content:center;margin-top:1.4rem;flex-wrap:wrap}
+.cta{font:500 .8rem "Cormorant Garamond",serif;letter-spacing:.14em;text-transform:uppercase;background:var(--olive);color:var(--on-olive);padding:.8rem 1.3rem;border:0;border-radius:99px;text-decoration:none;cursor:pointer}
+.cta:hover{background:#4b5329}
+/* program */
+.tl{position:relative;margin:2rem 0 0;padding:0;list-style:none}
+.tl:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(var(--gold),var(--rose))}
+.tl li{position:relative;width:50%;padding:.2rem 1.6rem 1.7rem 0;text-align:right;font-style:italic;font-size:1.3rem;line-height:1.25}
+.tl li:nth-child(even){margin-left:50%;padding:.2rem 0 1.7rem 1.6rem;text-align:left}
+.tl li:before{content:"";position:absolute;top:.55rem;right:-6px;width:11px;height:11px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--rose)}
+.tl li:nth-child(even):before{right:auto;left:-6px}
+.tl em{display:block;font-style:normal;font-size:1rem}
+.gift{background:#ece6da;max-width:none}
+.gift>div{max-width:430px;margin:auto}
+/* rsvp */
+form,.f{text-align:left;margin-top:1.8rem}
+label{display:block;margin:1.3rem 0 .4rem}
+input[type=text],textarea{width:100%;padding:.8rem;font:inherit;background:#f4ece6;color:var(--ink);border:1px solid var(--sage);border-radius:4px}
+textarea{min-height:110px}
+.rad{display:flex;align-items:center;gap:.6rem;margin:.5rem 0;cursor:pointer}
+.rad input{accent-color:var(--gold);width:1.1rem;height:1.1rem}
+.cta.wide{width:100%;margin-top:1.6rem;background:var(--gold);color:#fff}
+#thanks{display:none;margin-top:2rem;font-size:1.3rem}
+@media (prefers-reduced-motion:reduce){#seal .h{transition-duration:.01s}html{scroll-behavior:auto}}
+</style>
+</head>
+<body class="lock">
+
+<div id="seal" aria-live="polite">
+  <div class="h glass"></div><div class="h glass"></div>
+  <p class="msg" lang="ar" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+  <button id="btn" class="script" aria-label="Open the invitation">A&amp;S</button>
+  <p class="tap">TAP THE SEAL TO OPEN</p>
+</div>
+
+<header class="hero glass">
+  <div class="inner">
+    <p style="font-size:1.15rem;line-height:1.5">Mr and Mrs Mahboob<br>invite you to</p>
+    <p class="script" style="font-size:1.6rem;color:var(--gold);margin-top:1rem">The wedding of</p>
+    <h1 class="script names" id="names">Abdullah &amp; Sameena</h1>
+    <small>HYDERABAD, INDIA</small>
+    <a class="disc" href="#count">DISCOVER<br>⌄</a>
+  </div>
+</header>
+
+<section id="count">
+  <svg width="70" height="100" viewBox="0 0 70 100" fill="none" stroke="#b6842f" stroke-width="2.5" aria-hidden="true"><path d="M12 6h46M12 94h46M17 6c0 28 18 32 18 44S17 66 17 94M53 6c0 28-18 32-18 44s18 16 18 44z"/><path d="M24 14h22c-3 12-9 16-11 20-2-4-8-8-11-20z" fill="#efc3b8"/><path d="M20 90c4-14 10-18 15-18s11 4 15 18z" fill="#efc3b8"/></svg>
+  <div class="orn">✦</div>
+  <h2 class="script">Countdown</h2>
+  <p class="lbl script">Nikkah</p>
+  <div class="cd" role="timer"><div><b id="nd">0</b><span>DAYS</span></div><div><b id="nh">0</b><span>HOURS</span></div><div><b id="nm">0</b><span>MIN</span></div><div><b id="ns">0</b><span>SEC</span></div></div>
+  <p class="lbl script">Valima</p>
+  <div class="cd" role="timer"><div><b id="vd">0</b><span>DAYS</span></div><div><b id="vh">0</b><span>HOURS</span></div><div><b id="vm">0</b><span>MIN</span></div><div><b id="vs">0</b><span>SEC</span></div></div>
+</section>
+
+<section class="olive"><div>
+  <h2 class="script" style="font-size:2.7rem;margin-top:1rem">We're so happy to celebrate this day with you.</h2>
+  <p style="margin-top:2rem;opacity:.85">Having you with us means the world.<br>We can't wait to welcome you.</p>
+  <div class="scratch">
+    <div><p style="letter-spacing:.2em;font-size:.85rem">SAVE THE DATE</p><p class="script">7 &amp; 9<br>January 2027</p><p>Nikkah &amp; Valima</p></div>
+    <canvas id="sc" aria-label="Scratch to reveal the date"></canvas>
+  </div>
+</div></section>
+
+<section>
+  <h2 class="script">Welcome</h2>
+  <p>Together with their families</p>
+  <p class="script" style="font-size:2.6rem;margin:.4rem 0">Abdullah &amp; Sameena</p>
+  <p>request the honor of your presence as they begin their life together.</p>
+  <p style="margin-top:1.4rem">We hope you will join us to celebrate with love, blessings and joy — it wouldn't be the same without you.</p>
+</section>
+
+<section>
+  <h2 class="script">Nikkah</h2>
+  <div class="glass card"><div>
+    <p style="font-style:italic">Thursday, 7th of January, 2027</p>
+    <div class="orn" style="margin:.8rem 0">❦</div>
+    <p style="font-weight:500">Masjid-e-Bilqis</p>
+    <p style="font-size:.95rem">Tolichowki, Hyderabad</p>
+  </div></div>
+  <div class="btns">
+    <a class="cta" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Masjid-e-Bilqis+Tolichowki+Hyderabad">Open in Maps</a>
+    <a class="cta" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Nikkah+-+Abdullah+%26+Sameena&amp;dates=20270107/20270108&amp;location=Masjid-e-Bilqis,+Tolichowki,+Hyderabad">Add to calendar</a>
+  </div>
+</section>
+
+<section>
+  <h2 class="script">Valima</h2>
+  <div class="glass card"><div>
+    <p style="font-style:italic">Saturday, 9th of January, 2027</p>
+    <div class="orn" style="margin:.8rem 0">❦</div>
+    <p style="font-weight:500">Rhodium 7 Convention</p>
+    <p style="font-size:.95rem">Pillar Number 245, Attapur, Rajendra Nagar Rd,<br>Suleman Nagar, Chintalmet,<br>Hyderabad, Telangana 500048, India</p>
+  </div></div>
+  <div class="btns">
+    <a class="cta" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Rhodium+7+Convention+Attapur+Rajendra+Nagar+Rd+Hyderabad+500048">Open in Maps</a>
+    <a class="cta" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Valima+-+Abdullah+%26+Sameena&amp;dates=20270109/20270110&amp;location=Rhodium+7+Convention,+Attapur,+Hyderabad">Add to calendar</a>
+  </div>
+</section>
+
+<footer class="glass" style="padding:3.5rem 1rem"><p class="script" style="font-size:2.4rem;color:var(--ink)">A&amp;S</p></footer>
+
+<script>
+var EVENTS=[["n","2027-01-07T00:00:00+05:30"],["v","2027-01-09T00:00:00+05:30"]];
+
+// Opening seal
+var seal=document.getElementById("seal");
+document.getElementById("btn").onclick=function(){
+  seal.classList.add("open");
+  setTimeout(function(){seal.style.display="none";document.body.classList.remove("lock");},1350);
+};
+
+// Countdowns
+function tick(){EVENTS.forEach(function(e){var t=Math.max(0,new Date(e[1])-new Date()),v=[t/864e5,t%864e5/36e5,t%36e5/6e4,t%6e4/1e3];["d","h","m","s"].forEach(function(k,i){document.getElementById(e[0]+k).textContent=Math.floor(v[i])})})}
+tick();setInterval(tick,1000);
+
+// Scratch to reveal
+(function(){
+  var c=document.getElementById("sc"),x=c.getContext("2d"),down=false;
+  function size(){
+    var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1;
+    c.width=r.width*d;c.height=r.height*d;x.scale(d,d);
+    var g=x.createLinearGradient(0,0,r.width,r.height);
+    g.addColorStop(0,"#f4cfc4");g.addColorStop(.5,"#e6c9a0");g.addColorStop(1,"#d3d9c4");
+    x.globalCompositeOperation="source-over";x.fillStyle=g;x.fillRect(0,0,r.width,r.height);
+    x.fillStyle="#8a6a2c";x.font="italic 26px 'Pinyon Script',cursive";x.textAlign="center";
+    x.fillText("Scratch to",r.width/2,r.height/2-6);x.fillText("reveal",r.width/2,r.height/2+28);
+  }
+  function pt(e){var r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]}
+  function sc(e){
+    if(!down)return;var p=pt(e);
+    x.globalCompositeOperation="destination-out";x.beginPath();x.arc(p[0],p[1],24,0,7);x.fill();
+  }
+  c.addEventListener("pointerdown",function(e){down=true;c.setPointerCapture(e.pointerId);sc(e)});
+  c.addEventListener("pointermove",sc);
+  c.addEventListener("pointerup",function(){down=false});
+  size();window.addEventListener("load",size);
+})();
+
+</script>
+</body>
+</html>
